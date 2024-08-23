@@ -19,7 +19,7 @@ Yes.
 - Change the .env variable `DATASOURCE_ENDPOINT_URL` to point to the HTTP server running on localhost.
 - Run `credsdefault-search` offline.
 
-## Data collection process overview
+## Overview of the Data Collection Process
 1. Direction and Planning
 2. Collection and Compilation
 3. Processing
