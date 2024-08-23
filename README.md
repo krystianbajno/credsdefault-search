@@ -1,6 +1,11 @@
 # credsdefault-search
 A web search panel for default credentials that includes an API with a comprehensive dataset. The dataset contains information on services, vendors, systems, IoT devices, routers, and more.
 
+## Features
+- Infinite scroll
+- Search bar that filters results based on your query in real-time.
+- Can export filtered results to .csv report.
+
 ## Installation
 ```
 npm install
