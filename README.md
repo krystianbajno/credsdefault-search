@@ -27,18 +27,17 @@ Yes.
 5. Dissemination and Sharing
 6. Feedback and Continuous Improvement
 
-### Data is collected from many sources. 
-Sources include PDF files, GitHub repositories, CSV files, ZIP files, websites. The collector is gathering intel in the internet.
-The data is being serialized and saved in .json form in case the collection stops.
+### Data Collection from Multiple Sources
+Data is gathered from a variety of sources, including PDF files, GitHub repositories, CSV files, ZIP files, and websites. The data collector retrieves this information from the internet, serializes it, and saves it in .json format to ensure preservation in case the collection process is interrupted.
 
-### The collected data is processed.
-Each collector has it's own processor. Processors process Intel collected by the collectors and save the extracted Credentials in order to provide actionable data.
+### Data Processing
+Each data collector has an associated processor. These processors analyze the information gathered by the collectors and extract relevant credentials.
 
-### After processing, postprocessing occurs.
-The postprocessors load processed credentials, sort them, and remove duplicates.
+### Post-Processing
+After the initial processing, post-processors further refine the data by loading the extracted credentials, sorting them, and removing any duplicates.
 
-### Result is saved in output.json.
-The result is saved in an output JSON (`output.json`) file.
+### Saving the results
+The final processed data is saved in a JSON file (`output.json`).
 
-### The result is being hosted in releases
-The result file is saved as a `Release` in repository to be used by other tools.
+### Hosting the results
+The resulting file is made available as a `Release` in the repository, allowing it to be used by other tools.
