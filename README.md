@@ -27,11 +27,11 @@ Yes.
 5. Dissemination and Sharing
 6. Feedback and Continuous Improvement
 
-### The collectors are collecting data from many sources. 
+### Data is collected from many sources. 
 Sources include PDF files, GitHub repositories, CSV files, ZIP files, websites. The collector is gathering intel in the internet.
 The data is being serialized and saved in .json form in case the collection stops.
 
-### The data is processed by processors.
+### The collected data is processed.
 Each collector has it's own processor. Processors process Intel collected by the collectors and save the extracted Credentials in order to provide actionable data.
 
 ### After processing, postprocessing occurs.
