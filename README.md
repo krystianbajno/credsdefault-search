@@ -4,6 +4,7 @@ Yes.
 - Download the latest output.json from Releases.
 - Host it on localhost, for example using `python3 -m http.server` or [droppa](https://github.com/krystianbajno/droppa).
 - Change the .env variable `DATASOURCE_ENDPOINT_URL` to point to the HTTP server running on localhost.
+- Run `credsdefault-search` offline.
 
 ## Collection process overview
 ### The collectors are collecting data from many sources. 
