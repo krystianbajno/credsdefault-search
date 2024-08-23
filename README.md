@@ -1,3 +1,11 @@
+# credsdefault-search
+A web search panel for default credentials that includes an API with a comprehensive dataset. The dataset contains information on services, vendors, systems, IoT devices, routers, and more.
+
+## Installation
+```
+npm install
+npm run start
+```
 
 ## Can I run it offline?
 Yes.
@@ -6,7 +14,7 @@ Yes.
 - Change the .env variable `DATASOURCE_ENDPOINT_URL` to point to the HTTP server running on localhost.
 - Run `credsdefault-search` offline.
 
-## Collection process overview
+## Data collection process overview
 ### The collectors are collecting data from many sources. 
 Sources include PDF files, GitHub repositories, CSV files, ZIP files, websites. The collector is gathering intel.
 The data is being serialized and saved in .json form in case the collection stops.
