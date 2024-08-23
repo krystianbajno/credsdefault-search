@@ -20,11 +20,18 @@ Yes.
 - Run `credsdefault-search` offline.
 
 ## Data collection process overview
+1. Direction and Planning
+2. Collection and Compilation
+3. Processing
+4. Analysis and Review
+5. Dissemination and Sharing
+6. Feedback and Continuous Improvement
+
 ### The collectors are collecting data from many sources. 
-Sources include PDF files, GitHub repositories, CSV files, ZIP files, websites. The collector is gathering intel.
+Sources include PDF files, GitHub repositories, CSV files, ZIP files, websites. The collector is gathering intel in the internet.
 The data is being serialized and saved in .json form in case the collection stops.
 
-### The data is going to be processed later by processors.
+### The data is processed by processors.
 Each collector has it's own processor. Processors process Intel collected by the collectors and save the extracted Credentials in order to provide actionable data.
 
 ### After processing, postprocessing occurs.
