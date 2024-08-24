@@ -1,5 +1,5 @@
 # credsdefault-search
-A web search panel for default credentials that includes an API with a comprehensive dataset. The dataset contains information on services, vendors, systems, IoT devices, routers, and more.
+A web search panel for default credentials that includes an API with a comprehensive dataset. The dataset contains information on services, vendors, systems, OT and IoT devices, routers, and more.
 
 ## Features
 - Infinite scroll
