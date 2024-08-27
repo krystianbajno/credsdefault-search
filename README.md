@@ -21,3 +21,6 @@ Yes.
 
 ## CLI Version
 Check out the CLI version at [credsdefault-cli](https://github.com/krystianbajno/credsdefault-cli)
+
+## Dataset
+Check out the dataset at [credsdefault-dataset](https://github.com/krystianbajno/credsdefault-dataset)
