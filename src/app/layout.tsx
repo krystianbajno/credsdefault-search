@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "CredsDefault Search",
   description: "CredsDefault Search is a web search panel for default credentials, including a comprehensive dataset of services, vendors, systems, OT and IoT devices, routers, and more. Features include infinite scroll, real-time filtering, and CSV export.",
   openGraph: {
-    images: 'https://credsdefault.vercel.app/images/credsdefault.jpg',
+    images: 'https://credsdefault.vercel.app/images/credsdefault.png',
   },
   keywords: ['default credentials', 'search', 'dataset', 'security', 'IoT', 'OT', 'routers'],
   authors: [
