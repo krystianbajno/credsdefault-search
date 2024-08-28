@@ -1,0 +1,40 @@
+
+html {
+  font-size: clamp(12px, 2vw, 16px);
+  background-color: rgb(13, 13, 29);
+
+}
+
+:root {
+  font-family: monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+html {
+  scroll-behavior: smooth !important;
+}

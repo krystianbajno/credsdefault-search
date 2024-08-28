@@ -1,0 +1,25 @@
+.downloadCsv {
+  margin-left: 8px;
+  background: none;
+  border: 2px solid rgb(18,18,42);
+  border-radius: 8px;
+  padding: 0 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+
+  &:hover {
+    filter:brightness(1.4);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+}

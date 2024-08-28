@@ -1,0 +1,49 @@
+@import "styles/colors";
+
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.credentialItem {
+  flex: 1 1 calc(50% - 20px); 
+  background-color: $ternary;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid rgb(21, 21, 46);
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      ul {
+        margin-top: 5px;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .credentialItem {
+    flex: 1 1 100%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .credentialItem {
+    flex: 1 1 calc(33.333% - 20px); // 3 columns per row
+  }
+}

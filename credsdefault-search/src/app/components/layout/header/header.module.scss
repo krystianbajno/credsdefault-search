@@ -1,0 +1,93 @@
+@import "styles/colors.scss";
+@import "styles/layout.scss";
+
+
+.header {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+
+    background-color: rgb(13, 13, 29);
+    padding: 8px 32px;
+
+    @media screen and (max-width: 841px) {
+        padding: 8px 16px;
+    }
+  
+}
+
+.headerTop {
+    display: flex;
+    min-height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerBottom {
+    display: flex;
+    @media screen and (min-width: 841px) {
+        display: none;
+    }
+}
+
+.search {
+    color: $accent;
+}
+
+.headerLeft {}
+
+.headerCenter {
+    display: flex;
+    width: 50%;
+
+    @media screen and (max-width: 841px) {
+        display: none;
+    }
+}
+
+.headerRight {
+    & > a {
+        font-size: 1.3rem;
+    }
+}
+
+.searchInput {
+    font-size: 1.2rem;
+    width: 100%;
+    background-color: rgb(15, 15, 34);
+    padding: 16px 32px;
+    border-radius: 16px;
+    border: 2px solid rgb(18, 18, 42);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $accent;
+    letter-spacing: 4px;
+}
+
+.githubLogo {
+    width: 40px;
+    height: 40px;
+}
+
+.headerContents {
+    color: white;
+}
+
+.headerBreak {
+    position: relative;
+    padding-top: 90px;
+
+    @media screen and (max-width: 841px) {
+        padding-top: 128px;
+    }
+}
+
+.csv {
+    background: red;
+    border: none;
+    font-size: 1.4rem;
+}

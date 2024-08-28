@@ -1,0 +1,105 @@
+@import "styles/colors";
+
+.credentialField {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    min-height: 40px;
+    cursor: auto;
+    background-color: $ternary;
+    border-radius: 4px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.credentialKey {
+    flex: 0 0 30%;
+    background-color: lighten($ternary, 10%);
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: keyAnimation 3s ease-in-out infinite; 
+}
+
+.credentialValue {
+    flex: 1 1 70%; 
+    background-color: darken($ternary, 10%);
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    animation: valueAnimation 3s ease-in-out infinite; 
+}
+
+@keyframes keyAnimation {
+    0%, 100% {
+        flex-basis: 30%;
+    }
+    50% {
+        flex-basis: 40%;
+    }
+}
+
+@keyframes valueAnimation {
+    0%, 100% {
+        flex-basis: 70%;
+    }
+    50% {
+        flex-basis: 60%;
+    }
+}
+
+.credentialItem {
+    flex: 1 1 calc(50% - 20px); 
+    background-color: $ternary;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid rgb(21, 21, 46);
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            strong {
+                font-weight: 600;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex: 1 1 100%;
+    }
+
+    @media (min-width: 1500px) {
+        flex: 1 1 calc(33.333% - 20px); 
+    }
+}
+
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
