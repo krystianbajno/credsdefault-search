@@ -7,6 +7,7 @@ A web search panel for default credentials that includes an API with a comprehen
 ## Features
 - Search bar that filters results based on your query in real-time.
 - Can export filtered results to .csv report.
+- After loading the full dataset from datasource, CREDSDEFAULT works locally in your browser. No usage data is collected.
 - Infinite scroll
 
 ## Installation
