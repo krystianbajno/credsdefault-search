@@ -3,8 +3,8 @@ import "@/app/globals.css";
 import ClientLayout from "@/app/components/layout/client-layout";
 
 export const metadata: Metadata = {
-  title: "CredsDefault Search",
-  description: "CredsDefault Search is a web search panel for default credentials, including a comprehensive dataset of services, vendors, systems, OT and IoT devices, routers, and more.",
+  title: "CREDSDEFAULT search",
+  description: "CREDSDEFAULT search is a web search panel for default credentials, including a comprehensive dataset of services, vendors, systems, OT and IoT devices, routers, and more.",
   openGraph: {
     images: 'https://credsdefault.vercel.app/images/credsdefault.png',
   },
