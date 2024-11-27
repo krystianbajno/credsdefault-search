@@ -1,10 +1,13 @@
+<img src="https://credsdefault.vercel.app/images/credsdefault.png"></img>
+
 # credsdefault-search
+
 A web search panel for default credentials that includes an API with a comprehensive dataset. The dataset contains information on services, vendors, systems, OT and IoT devices, routers, and more.
 
 ## Features
-- Infinite scroll
 - Search bar that filters results based on your query in real-time.
 - Can export filtered results to .csv report.
+- Infinite scroll
 
 ## Installation
 ```
