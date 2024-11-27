@@ -9,11 +9,13 @@ export const useCredentialSearch = (itemsPerPage: number = 24) => {
     searchTerm,
     allCredentials,
     setAllCredentials,
+    filteredCredentials,
     setFilteredCredentials,
     setDisplayedCredentials,
     setLoading,
     setError,
     page,
+    setPage,
   } = useSearch();
 
   const countDashFields = (credential: Credential) => {
@@ -25,19 +27,13 @@ export const useCredentialSearch = (itemsPerPage: number = 24) => {
     try {
       const data = await Credentials.get();
       setAllCredentials(data);
-      const filtered = search(searchTerm, data);
-
-      const sortedFiltered = filtered.sort((a, b) => countDashFields(a) - countDashFields(b));
-
-      setFilteredCredentials(sortedFiltered); 
-      setDisplayedCredentials(sortedFiltered.slice(0, itemsPerPage)); 
     } catch (error) {
-      setError("Failed to fetch credentials");
-      console.error("Error fetching credentials:", error);
+      setError('Failed to fetch credentials');
+      console.error('Error fetching credentials:', error);
     } finally {
       setLoading(false);
     }
-  }, [setAllCredentials, searchTerm, setFilteredCredentials, setDisplayedCredentials, setLoading, setError, itemsPerPage]);
+  }, [setAllCredentials, setLoading, setError]);
 
   useEffect(() => {
     fetchCredentials();
@@ -45,13 +41,43 @@ export const useCredentialSearch = (itemsPerPage: number = 24) => {
 
   useEffect(() => {
     if (allCredentials.length > 0) {
-      const filtered = search(searchTerm, allCredentials);
+      setPage(1);
 
-      const sortedFiltered = filtered.sort((a, b) => countDashFields(a) - countDashFields(b));
+      let filtered = [];
 
-      const paginated = sortedFiltered.slice(0, page * itemsPerPage);
+      if (searchTerm) {
+        filtered = search(searchTerm, allCredentials);
+      } else {
+        filtered = allCredentials;
+      }
+
+      const sortedFiltered = filtered.sort(
+        (a, b) => countDashFields(a) - countDashFields(b)
+      );
+
       setFilteredCredentials(sortedFiltered);
+
+      const paginated = sortedFiltered.slice(0, itemsPerPage);
       setDisplayedCredentials(paginated);
     }
-  }, [page, searchTerm, allCredentials, setFilteredCredentials, setDisplayedCredentials, itemsPerPage]);
+  }, [
+    searchTerm,
+    allCredentials,
+    setFilteredCredentials,
+    setDisplayedCredentials,
+    itemsPerPage,
+    setPage,
+  ]);
+
+  useEffect(() => {
+    if (filteredCredentials.length > 0) {
+      const paginated = filteredCredentials.slice(0, page * itemsPerPage);
+      setDisplayedCredentials(paginated);
+    }
+  }, [
+    page,
+    filteredCredentials,
+    setDisplayedCredentials,
+    itemsPerPage,
+  ]);
 };
